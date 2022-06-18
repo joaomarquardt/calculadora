@@ -21,13 +21,6 @@ header h1 {
     text-align: center;
 }
 
-main {
-    border-radius: 10px;
-    width: 600px;
-    margin: auto;
-    padding: 10px;
-}
-
 table {
     border-radius: 3px;
     background-color: wheat;
