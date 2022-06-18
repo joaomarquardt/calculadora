@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <style>
+        @font-face {
+            font-family: 'Numero';
+            src: url('estilo/Calculator.ttf') format('truetype');
+        }
+
+        thead td > input {
+            font-weight: bold;
+            font-family: 'Numero', sans-serif;
+            font-size: 2.1em;
+            max-width: 260px;
+            padding: 5px;
+            letter-spacing: 2.2px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CALCULADORA</h1>
+    </header>
+    <main>
+        <form action="#" name="calculadora">
+            <table>
+                <caption>Marquardt Inc.</caption>
+                <thead>
+                    <tr>
+                        <td colspan="5">
+                            <input type="text" name="visor" id="visor" readonly>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody class="box-buttons">
+                    <tr>
+                        <td>
+                            <input type="button" value="7" id="num-7" onclick="btnclicado('7')">
+                        </td>
+
+                        <td>
+                            <input type="button" value="8" id="num-8" onclick="btnclicado('8')">
+                        </td>
+                        <td>
+                            <input type="button" value="9" id="num-9" onclick="btnclicado('9')">
+                        </td>
+                        <td>
+                            <input type="button" value="<" id="porcent" onclick="volta()">
+                        </td>
+                        <td>
+                            <input type="button" value="C" id="limpar" onclick="limpa()">
+                        </td>      
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="button" value="4" id="num-4" onclick="btnclicado('4')">
+                        </td>
+                        <td>
+                            <input type="button" value="5" id="num-5" onclick="btnclicado('5')">
+                        </td>
+                        <td>
+                            <input type="button" value="6" id="num-6" onclick="btnclicado('6')">
+                        </td>
+                        <td>
+                            <input type="button" value="x" id="multi" onclick="btnclicado('*')">
+                        </td>
+                        <td>
+                            <input type="button" value="÷" id="divisao" onclick="btnclicado('/')">
+                        </td>  
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="button" value="1" id="num-1" onclick="btnclicado('1')">
+                        </td>
+                        <td>
+                            <input type="button" value="2" id="num-2" onclick="btnclicado('2')">
+                        </td>
+                        <td>
+                            <input type="button" value="3" id="num-3" onclick="btnclicado('3')">
+                        </td>
+                        
+                        <td>
+                            <input type="button" value="-" id="subtracao" onclick="btnclicado('-')">
+                        </td>
+                        <td rowspan="2">
+                            <input type="button" value="=" id="btn-result" onclick="resultado()">
+                        </td>  
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="button" value="0" id="num-0" onclick="btnclicado('0')">
+                        </td>
+                        <td>
+                            <input type="button" value="." id="decimal" onclick="btnclicado('.')">
+                        </td>
+                        <td colspan="2">
+                            <input type="button" value="+" id="soma" onclick="btnclicado('+')">
+                            
+                        </td>  
+                    </tr>
+
+                    
+                    
+                </tbody>
+            </table>
+        </form>
+    </main>
+    <div id="ajuda"></div>
+    <footer>
+        <p>&copy; <a href="https://www.instagram.com/jv.marquardt/" target="_blank" rel="external">João Marquardt</a></p>
+    </footer>
+
+    <script src="logica/script.js"></script>
+</body>
+</html>
